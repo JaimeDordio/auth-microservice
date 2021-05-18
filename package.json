@@ -1,0 +1,32 @@
+{
+  "name": "auth-microservice",
+  "version": "1.0.0",
+  "description": "Authentication microservice built with Moleculer",
+  "scripts": {
+    "dev": "moleculer-runner --repl --hot services",
+    "start": "moleculer-runner",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/jaimedordio/auth-microservice.git"
+  },
+  "author": "Jaime Dordio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/jaimedordio/auth-microservice/issues"
+  },
+  "homepage": "https://gitlab.com/jaimedordio/auth-microservice#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.5.1",
+    "mkdirp": "^1.0.4",
+    "moleculer": "^0.14.13",
+    "moleculer-db": "^0.8.13",
+    "moleculer-web": "^0.10.0-beta2",
+    "slug": "^4.0.4"
+  },
+  "devDependencies": {
+    "moleculer-repl": "^0.6.4"
+  }
+}
