@@ -16,8 +16,7 @@ module.exports = {
       host: "smtp.sendgrid.net",
       port: 587,
       auth: {
-        api_key:
-          "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",
+        api_key: process.env.SENDGRID_KEY,
       },
     },
   },

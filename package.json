@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Authentication microservice built with Moleculer",
   "scripts": {
-    "dev": "moleculer-runner --repl --hot services",
-    "start": "moleculer-runner",
+    "dev": "moleculer-runner -e --repl --hot services",
+    "start": "moleculer-runner -e",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +19,7 @@
   "homepage": "https://gitlab.com/jaimedordio/auth-microservice#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "dotenv": "^9.0.2",
     "jsonwebtoken": "^8.5.1",
     "mkdirp": "^1.0.4",
     "moleculer": "^0.14.13",
