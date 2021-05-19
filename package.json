@@ -22,8 +22,12 @@
     "jsonwebtoken": "^8.5.1",
     "mkdirp": "^1.0.4",
     "moleculer": "^0.14.13",
+    "moleculer-console-tracer": "^0.2.3",
     "moleculer-db": "^0.8.13",
+    "moleculer-mail": "^1.2.5",
     "moleculer-web": "^0.10.0-beta2",
+    "nodemailer": "^6.6.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "slug": "^4.0.4"
   },
   "devDependencies": {

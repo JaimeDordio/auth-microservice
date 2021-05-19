@@ -28,6 +28,7 @@ module.exports = {
       },
     ],
 
+    logLevel: "debug",
     logRequestParams: "info",
     // logResponseData: "info",
 
