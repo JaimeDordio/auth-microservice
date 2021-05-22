@@ -1,6 +1,5 @@
 "use strict";
 
-const _ = require("lodash");
 const ApiGateway = require("moleculer-web");
 const { UnAuthorizedError } = ApiGateway.Errors;
 
