@@ -1,7 +1,7 @@
 const { MoleculerClientError, MoleculerError, MoleculerRetryableError } =
   require("moleculer").Errors;
 const nodemailer = require("nodemailer");
-const sgTransport = require("nodemailer-sendgrid-transport");
+require("dotenv").config();
 
 module.exports = {
   name: "mailer",
@@ -13,10 +13,11 @@ module.exports = {
     from: "jaimedordio@gmail.com",
 
     transport: {
-      host: "smtp.sendgrid.net",
+      host: "smtp.ethereal.email",
       port: 587,
       auth: {
-        api_key: process.env.SENDGRID_KEY,
+        user: process.env.ETHEREAL_USER,
+        pass: process.env.ETHEREAL_PASS,
       },
     },
   },
@@ -82,12 +83,6 @@ module.exports = {
   },
 
   created() {
-    const { auth } = this.settings.transport;
-
-    this.transporter = nodemailer.createTransport(
-      sgTransport({
-        auth,
-      })
-    );
+    this.transporter = nodemailer.createTransport(this.settings.transport);
   },
 };

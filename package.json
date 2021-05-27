@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "moleculer-runner -e --repl --hot services",
     "start": "moleculer-runner -e",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest test --watch --verbose --silent=false --coverage"
   },
   "repository": {
     "type": "git",
@@ -13,13 +13,10 @@
   },
   "author": "Jaime Dordio",
   "license": "MIT",
-  "bugs": {
-    "url": "https://gitlab.com/jaimedordio/auth-microservice/issues"
-  },
-  "homepage": "https://gitlab.com/jaimedordio/auth-microservice#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^9.0.2",
+    "faker": "^5.5.3",
     "jsonwebtoken": "^8.5.1",
     "mkdirp": "^1.0.4",
     "moleculer": "^0.14.13",
@@ -32,6 +29,7 @@
     "slug": "^4.0.4"
   },
   "devDependencies": {
+    "jest": "^27.0.1",
     "moleculer-repl": "^0.6.4"
   }
 }

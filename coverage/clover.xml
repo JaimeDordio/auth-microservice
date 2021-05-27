@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1622153991101" clover="3.2.0">
+  <project timestamp="1622153991101" name="All files">
+    <metrics statements="77" coveredstatements="66" conditionals="42" coveredconditionals="21" methods="15" coveredmethods="15" elements="134" coveredelements="102" complexity="0" loc="77" ncloc="77" packages="2" files="3" classes="3"/>
+    <package name="mixins">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="db.mixin.js" path="/Users/jaimedordio/Developer/UAN/auth-microservice/mixins/db.mixin.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="services">
+      <metrics statements="71" coveredstatements="60" conditionals="42" coveredconditionals="21" methods="14" coveredmethods="14"/>
+      <file name="mailer.service.js" path="/Users/jaimedordio/Developer/UAN/auth-microservice/services/mailer.service.js">
+        <metrics statements="17" coveredstatements="14" conditionals="4" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="52" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="61" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+      </file>
+      <file name="users.service.js" path="/Users/jaimedordio/Developer/UAN/auth-microservice/services/users.service.js">
+        <metrics statements="54" coveredstatements="46" conditionals="38" coveredconditionals="19" methods="9" coveredmethods="9"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="40" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="45" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="54" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="57" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="92" count="6" type="stmt"/>
+        <line num="95" count="6" type="stmt"/>
+        <line num="96" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="106" count="6" type="stmt"/>
+        <line num="107" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="112" count="6" type="stmt"/>
+        <line num="118" count="6" type="stmt"/>
+        <line num="130" count="1" type="stmt"/>
+        <line num="131" count="1" type="stmt"/>
+        <line num="135" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="137" count="1" type="stmt"/>
+        <line num="142" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="168" count="1" type="stmt"/>
+        <line num="170" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="171" count="1" type="stmt"/>
+        <line num="175" count="1" type="cond" truecount="2" falsecount="2"/>
+        <line num="176" count="0" type="stmt"/>
+        <line num="181" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="182" count="0" type="stmt"/>
+        <line num="184" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="185" count="0" type="stmt"/>
+        <line num="190" count="1" type="stmt"/>
+        <line num="192" count="1" type="stmt"/>
+        <line num="196" count="1" type="stmt"/>
+        <line num="202" count="1" type="stmt"/>
+        <line num="227" count="1" type="stmt"/>
+        <line num="231" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="233" count="1" type="stmt"/>
+        <line num="246" count="8" type="stmt"/>
+        <line num="260" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="261" count="8" type="cond" truecount="3" falsecount="1"/>
+        <line num="264" count="8" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

@@ -144,20 +144,6 @@ module.exports = {
     },
 
     /**
-     * Get current user
-     */
-    profile: {
-      auth: "required",
-      rest: "GET /user",
-      async handler(ctx) {
-        const user = await this.getById(ctx.meta.user._id);
-        if (!user) throw new MoleculerClientError("User not found", 400);
-
-        return await this.transformUser(user, true, ctx.meta.token);
-      },
-    },
-
-    /**
      * Update current user
      */
     updateProfile: {
@@ -223,10 +209,6 @@ module.exports = {
 
     get: {
       rest: "GET /users/:id",
-    },
-
-    update: {
-      rest: "PUT /users/:id",
     },
 
     remove: {
