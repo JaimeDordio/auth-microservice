@@ -1,5 +1,4 @@
-const { MoleculerClientError, MoleculerError, MoleculerRetryableError } =
-  require("moleculer").Errors;
+const { MoleculerError, MoleculerRetryableError } = require("moleculer").Errors;
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
@@ -11,15 +10,6 @@ module.exports = {
 
     // Sender default e-mail address
     from: "jaimedordio@gmail.com",
-
-    transport: {
-      host: "smtp.ethereal.email",
-      port: 587,
-      auth: {
-        user: process.env.ETHEREAL_USER,
-        pass: process.env.ETHEREAL_PASS,
-      },
-    },
   },
 
   actions: {
@@ -74,8 +64,8 @@ module.exports = {
         } else
           return reject(
             new MoleculerError(
-              "Unable to send email! Invalid mailer transport: " +
-                JSON.stringify(this.settings.transport)
+              "Unable to send email! Invalid transporter: " +
+                JSON.stringify(this.transporter)
             )
           );
       });
@@ -83,6 +73,20 @@ module.exports = {
   },
 
   created() {
-    this.transporter = nodemailer.createTransport(this.settings.transport);
+    nodemailer.createTestAccount((err, account) => {
+      if (err) console.error("Error creating a test account: ", err.message);
+
+      console.log("Ethereal account", account);
+
+      this.transporter = nodemailer.createTransport({
+        host: account.smtp.host,
+        port: account.smtp.port,
+        secure: account.smtp.secure,
+        auth: {
+          user: account.user,
+          pass: account.pass,
+        },
+      });
+    });
   },
 };
