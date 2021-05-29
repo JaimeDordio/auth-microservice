@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "87f18b39-f4d1-4b5e-a8b5-33a7f2f98d93",
+		"name": "Auth Microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve all API actions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/list-aliases",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"list-aliases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test API call",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/testing",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"testing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"email\": \"test@test.com\",\n        \"password\": \"1234567890\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user from username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/profiles/:username",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"profiles",
+						":username"
+					],
+					"variable": [
+						{
+							"key": "username",
+							"value": "jaimedordio",
+							"description": "Profile username"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user from ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/:id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "e46DHgVgnVPDIJXJ",
+							"description": "User ID"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Crysteel7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/:id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1CLvZLy51arIBp7P",
+							"description": "User ID"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/:id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1CLvZLy51arIBp7P",
+							"description": "User ID"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users?page=1&pageSize=80",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "Page to retrieve"
+						},
+						{
+							"key": "pageSize",
+							"value": "80",
+							"description": "Page size"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Mail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"recipient\": \"jaimedordio@gmail.com\",\n    \"subject\": \"Test\",\n    \"body\": \"Test body\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/mailer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"mailer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"username\": \"jaimedordio2\",\n        \"password\": \"1234567890\",\n        \"email\": \"test3@test3.com\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{jwt}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var jsonData = pm.response.json();",
+					"",
+					"if (jsonData.user && jsonData.user.token) {",
+					"    pm.collectionVariables.set(\"jwt_token\", jsonData.user.token);",
+					"}",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://auth-microservice-smul7.ondigitalocean.app"
+		},
+		{
+			"key": "jwt",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU0NkRIZ1ZnblZQRElKWEoiLCJ1c2VybmFtZSI6ImphaW1lZG9yZGlvIiwiZXhwIjoxNjI0OTA3MzIzLCJpYXQiOjE2MTk3MjMzMjN9.wtNIU9xbB_g-Z61a_FT0hRAYxFLb0OE6q_nYZgMtRZw"
+		},
+		{
+			"key": "jwt_token",
+			"value": ""
+		}
+	]
+}
